@@ -243,7 +243,9 @@ const expandedGames = Array.from({ length: 40 }).map((_, index) => {
     ]
   };
   
-  const description = descriptions[category][Math.floor(Math.random() * descriptions[category].length)];
+  // Use default category if the current one doesn't exist in descriptions
+  const descriptionArray = descriptions[category] || descriptions["Action"];
+  const description = descriptionArray[Math.floor(Math.random() * descriptionArray.length)];
   
   // Generate random game size between 1.0 and 5.0 GB
   const size = Math.round((1 + Math.random() * 4) * 10) / 10;
