@@ -108,11 +108,11 @@ export interface FAQ {
 export const faqs: FAQ[] = [
   {
     question: "Are the games really free?",
-    answer: "Yes, all games on our platform are completely free to download. We're able to offer these games at no cost through our partnerships with game developers and sponsors. The brief verification process helps us maintain this service."
+    answer: "Yes! All games on our platform are 100% free to download and play. There are absolutely no hidden fees, subscriptions, or 'premium' features to pay for. Every game is completely free forever."
   },
   {
-    question: "What is the verification process?",
-    answer: "The verification process is a quick step that helps us maintain our free service. It typically involves completing a short survey, downloading a sponsored app, or viewing an advertisement. This takes just a few minutes and unlocks your game download immediately."
+    question: "How can you offer games for free?",
+    answer: "We're able to offer games for free through our partnerships with game developers and sponsors who believe in making entertainment accessible to everyone. Our site is supported by minimal advertisements that don't interfere with your gaming experience."
   },
   {
     question: "Are the games safe to download?",

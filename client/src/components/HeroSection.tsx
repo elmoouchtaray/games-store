@@ -17,7 +17,7 @@ export default function HeroSection() {
             <span className="text-[hsl(var(--neon-cyan))] text-shadow-neon">Free Games</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">
-            Get instant access to hundreds of high-quality games without spending a penny. New titles added weekly!
+            Get instant access to hundreds of high-quality games 100% free. No hidden fees, no trials - just free games. New titles added weekly!
           </p>
           <a href="/games" className="glow-button-cyan bg-[hsl(var(--neon-cyan))] hover:bg-blue-500 text-[hsl(var(--primary-bg))] font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-[0_0_5px_rgba(0,240,255,0.8)] animate-[pulse_3s_ease-in-out_infinite] transition-all duration-300">
             Browse Games

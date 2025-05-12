@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X, Lock } from "lucide-react";
+import { X, Download } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
 interface DownloadModalProps {
@@ -15,13 +15,13 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
       setProgress(0);
       const timer = setInterval(() => {
         setProgress(prevProgress => {
-          if (prevProgress >= 75) {
+          if (prevProgress >= 100) {
             clearInterval(timer);
-            return 75;
+            return 100;
           }
           return prevProgress + 5;
         });
-      }, 200);
+      }, 150);
       
       return () => {
         clearInterval(timer);
@@ -31,10 +31,11 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
   if (!isOpen) return null;
   
-  const handleUnlockClick = (e: React.MouseEvent) => {
+  const handleDownloadClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    // In a real app, this would redirect to a CPA offer
-    window.open('https://example.com/cpa-offer', '_blank');
+    // In a real app, this would download the game
+    alert("Your download has started! The game will be downloaded to your device shortly.");
+    onClose();
   };
   
   return (
@@ -53,7 +54,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
               Your Download is <span className="text-[hsl(var(--neon-cyan))] text-shadow-neon">Ready!</span>
             </h3>
             <p className="text-gray-300">
-              Complete one quick offer to unlock your download
+              All games are 100% free to download and play!
             </p>
           </div>
           <div className="mb-6">
@@ -63,24 +64,24 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
               <span>{progress}%</span>
             </div>
           </div>
-          <div className="p-4 bg-gray-800 rounded-lg mb-6 border border-gray-700">
-            <div className="flex items-center">
-              <div className="w-12 h-12 bg-[hsl(var(--primary-bg))] rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                <Lock className="h-6 w-6 text-[hsl(var(--neon-cyan))]" />
+          <div className="p-6 bg-gray-800 rounded-lg mb-6 border border-gray-700">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-16 h-16 bg-[hsl(var(--primary-bg))] rounded-full flex items-center justify-center mb-4">
+                <Download className="h-8 w-8 text-[hsl(var(--neon-cyan))]" />
               </div>
               <div>
-                <h4 className="font-bold text-white mb-1">Verification Required</h4>
-                <p className="text-sm text-gray-400">Please complete a quick verification to continue. This helps us maintain our free service.</p>
+                <h4 className="font-bold text-white text-xl mb-2">Completely Free</h4>
+                <p className="text-gray-300">Your game is ready to download with no fees, subscriptions, or hidden costs.</p>
               </div>
             </div>
           </div>
           <div className="text-center">
             <a 
               href="#"
-              onClick={handleUnlockClick}
+              onClick={handleDownloadClick}
               className="glow-button-cyan bg-[hsl(var(--neon-cyan))] hover:bg-blue-500 text-[hsl(var(--primary-bg))] font-bold py-3 px-6 rounded-lg shadow-[0_0_5px_rgba(0,240,255,0.8)] transition-all duration-300 block mb-4"
             >
-              Unlock Your Download Now
+              Download Now (Free)
             </a>
             <p className="text-xs text-gray-500">
               By clicking above, you agree to our <a href="#" className="text-[hsl(var(--neon-cyan))]">Terms of Service</a> and <a href="#" className="text-[hsl(var(--neon-cyan))]">Privacy Policy</a>
