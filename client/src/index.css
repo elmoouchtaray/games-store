@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 225 9% 8%;
+  --foreground: 0 0% 100%;
+  --muted: 225 10% 92%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 224 20% 13%;
+  --popover-foreground: 0 0% 100%;
+  --card: 224 20% 13%;
+  --card-foreground: 0 0% 100%;
+  --border: 220 10% 20%;
+  --input: 220 10% 20%;
+  --primary: 186 100% 50%;
+  --primary-foreground: 225 9% 8%;
+  --secondary: 224 20% 13%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 224 20% 13%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 16 100% 50%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 186 100% 50%;
+  --radius: 0.5rem;
+  --chart-1: 186 100% 50%;
+  --chart-2: 307 100% 50%;
+  --chart-3: 266 100% 50%;
+  --chart-4: 16 100% 50%;
+  --chart-5: 48 96% 53%;
+
+  /* Custom site colors */
+  --neon-cyan: 186 100% 50%;
+  --neon-magenta: 307 100% 50%;
+  --neon-purple: 266 100% 50%;
+  --primary-bg: 225 9% 8%;
+  --secondary-bg: 224 20% 13%;
+  --error: 16 100% 50%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-rajdhani;
+  }
+}
+
+@layer components {
+  .text-shadow-neon {
+    text-shadow: 0 0 10px hsla(var(--neon-cyan), 0.7), 0 0 20px hsla(var(--neon-cyan), 0.4);
+  }
+  
+  .text-shadow-purple {
+    text-shadow: 0 0 10px hsla(var(--neon-purple), 0.7), 0 0 20px hsla(var(--neon-purple), 0.4);
+  }
+  
+  .text-shadow-magenta {
+    text-shadow: 0 0 10px hsla(var(--neon-magenta), 0.7), 0 0 20px hsla(var(--neon-magenta), 0.4);
+  }
+  
+  .glow-button-cyan {
+    @apply relative overflow-hidden transition-all duration-300 z-10;
+  }
+  
+  .glow-button-cyan:hover {
+    @apply shadow-[0_0_15px_rgba(0,240,255,0.8)] -translate-y-0.5;
+  }
+  
+  .glow-button-magenta {
+    @apply relative overflow-hidden transition-all duration-300 z-10;
+  }
+  
+  .glow-button-magenta:hover {
+    @apply shadow-[0_0_15px_rgba(255,0,229,0.8)] -translate-y-0.5;
+  }
+  
+  .glow-button-purple {
+    @apply relative overflow-hidden transition-all duration-300 z-10;
+  }
+  
+  .glow-button-purple:hover {
+    @apply shadow-[0_0_15px_rgba(112,0,255,0.8)] -translate-y-0.5;
+  }
+
+  .game-card {
+    @apply transition-all duration-300;
+  }
+  
+  .game-card:hover {
+    @apply -translate-y-2.5 shadow-[0_10px_25px_rgba(0,240,255,0.2)];
+  }
+
+  .ad-space {
+    @apply border-2 border-dashed border-[hsla(var(--neon-cyan),0.3)];
+  }
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
