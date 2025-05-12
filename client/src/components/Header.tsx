@@ -43,14 +43,44 @@ export default function Header() {
           </div>
         </nav>
         
-        {/* Mobile Menu */}
-        <div className={`md:hidden bg-[hsl(var(--secondary-bg))] absolute top-full left-0 w-full z-50 border-b border-gray-800 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-          <div className="container mx-auto py-4 px-6">
-            <div className="flex flex-col space-y-4">
-              <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">Home</Link>
-              <Link href="/games" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">Games</Link>
-              <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">How It Works</a>
-              <a href="#faq" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">FAQ</a>
+        {/* Mobile Menu - Positioned fixed to overlay the entire page */}
+        <div 
+          className={`md:hidden fixed left-0 right-0 top-[61px] bottom-0 bg-[hsla(var(--primary-bg),0.98)] backdrop-blur-sm z-50 border-b border-gray-800 transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 -translate-y-4 pointer-events-none'
+          }`}
+        >
+          <div className="container mx-auto py-10 px-6">
+            <div className="flex flex-col space-y-8">
+              <Link 
+                href="/" 
+                onClick={() => setIsMobileMenuOpen(false)} 
+                className="text-white text-xl font-rajdhani font-semibold hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300 border-b border-gray-800 pb-3"
+              >
+                Home
+              </Link>
+              <Link 
+                href="/games" 
+                onClick={() => setIsMobileMenuOpen(false)} 
+                className="text-white text-xl font-rajdhani font-semibold hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300 border-b border-gray-800 pb-3"
+              >
+                Games
+              </Link>
+              <a 
+                href="#how-it-works" 
+                onClick={() => setIsMobileMenuOpen(false)} 
+                className="text-white text-xl font-rajdhani font-semibold hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300 border-b border-gray-800 pb-3"
+              >
+                How It Works
+              </a>
+              <a 
+                href="#faq" 
+                onClick={() => setIsMobileMenuOpen(false)} 
+                className="text-white text-xl font-rajdhani font-semibold hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300 border-b border-gray-800 pb-3"
+              >
+                FAQ
+              </a>
             </div>
           </div>
         </div>
