@@ -73,6 +73,7 @@ export interface Testimonial {
   text: string;
   rating: number;
   accentColor: string;
+  profileImage: string;
 }
 
 export const testimonials: Testimonial[] = [
@@ -81,21 +82,64 @@ export const testimonials: Testimonial[] = [
     title: "Hardcore Gamer",
     text: "I was skeptical at first, but this site is the real deal! I've downloaded several games now and they all work perfectly. The verification process is fast and simple too!",
     rating: 5,
-    accentColor: "cyan"
+    accentColor: "cyan",
+    profileImage: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
     name: "Sarah Johnson",
     title: "Casual Gamer",
     text: "GameVault has saved me so much money! The games are high quality and the download speeds are fantastic. I've recommended it to all my gaming friends!",
     rating: 4.5,
-    accentColor: "magenta"
+    accentColor: "magenta",
+    profileImage: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
     name: "Ryan Kim",
     title: "Streamer",
     text: "I've been using GameVault for over a year now. The selection keeps growing and I've never had any issues with the downloads. Definitely the best gaming site out there!",
     rating: 5,
-    accentColor: "purple"
+    accentColor: "purple",
+    profileImage: "https://randomuser.me/api/portraits/men/67.jpg"
+  },
+  {
+    name: "Emily Zhang",
+    title: "Content Creator",
+    text: "As a content creator, I'm always looking for new games to stream. GameVault has introduced me to several indie gems that have become hits with my audience. The download verification is fast and simple!",
+    rating: 5,
+    accentColor: "pink",
+    profileImage: "https://randomuser.me/api/portraits/women/33.jpg"
+  },
+  {
+    name: "David Rodriguez",
+    title: "PC Gaming Enthusiast",
+    text: "I've tried many game download sites, but GameVault stands out for its clean interface and absence of annoying pop-ups. The game selection is excellent and constantly updated with new titles.",
+    rating: 5,
+    accentColor: "blue",
+    profileImage: "https://randomuser.me/api/portraits/men/46.jpg"
+  },
+  {
+    name: "Jessica Williams",
+    title: "Parent & Casual Gamer",
+    text: "I love that I can find family-friendly games for my kids here. The category filtering makes it easy to find age-appropriate content. The download speeds are impressive too!",
+    rating: 4.5,
+    accentColor: "green",
+    profileImage: "https://randomuser.me/api/portraits/women/68.jpg"
+  },
+  {
+    name: "Michael Chen",
+    title: "Game Developer",
+    text: "As a game developer, I appreciate the organization and curation of games on this platform. It's a great place to discover indie titles and get inspiration for my own projects.",
+    rating: 4,
+    accentColor: "indigo",
+    profileImage: "https://randomuser.me/api/portraits/men/22.jpg"
+  },
+  {
+    name: "Sophia Martinez",
+    title: "Mobile Gamer",
+    text: "Even though I primarily play mobile games, I've found GameVault useful for discovering PC titles that later get mobile ports. The interface is intuitive and works well even on my tablet browser.",
+    rating: 4,
+    accentColor: "amber",
+    profileImage: "https://randomuser.me/api/portraits/women/54.jpg"
   }
 ];
 
