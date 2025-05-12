@@ -92,9 +92,9 @@ export default function GamesSection() {
         </div>
         
         <div className="text-center">
-          <a href="#" className="glow-button-cyan inline-block bg-transparent border-2 border-[hsl(var(--neon-cyan))] hover:bg-[hsl(var(--neon-cyan))] hover:text-[hsl(var(--primary-bg))] text-[hsl(var(--neon-cyan))] font-bold py-3 px-10 rounded-full transition-all duration-300">
+          <Link href="/games" className="glow-button-cyan inline-block bg-transparent border-2 border-[hsl(var(--neon-cyan))] hover:bg-[hsl(var(--neon-cyan))] hover:text-[hsl(var(--primary-bg))] text-[hsl(var(--neon-cyan))] font-bold py-3 px-10 rounded-full transition-all duration-300">
             View All Games
-          </a>
+          </Link>
         </div>
       </div>
     </section>

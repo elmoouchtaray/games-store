@@ -9,7 +9,7 @@ export default function HeroSection() {
         backgroundSize: "cover", 
         backgroundPosition: "center" 
       }}>
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--primary-bg))] via-[hsla(var(--primary-bg),0.8)] to-[hsl(var(--primary-bg))]"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--primary-bg))] via-[hsla(var(--primary-bg),0.95)] to-[hsl(var(--primary-bg))] before:bg-black/60 before:absolute before:inset-0"></div>
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-rajdhani mb-6 leading-tight">
@@ -19,7 +19,7 @@ export default function HeroSection() {
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl">
             Get instant access to hundreds of high-quality games without spending a penny. New titles added weekly!
           </p>
-          <a href="#games" className="glow-button-cyan bg-[hsl(var(--neon-cyan))] hover:bg-blue-500 text-[hsl(var(--primary-bg))] font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-[0_0_5px_rgba(0,240,255,0.8)] animate-pulse transition-all duration-300">
+          <a href="/games" className="glow-button-cyan bg-[hsl(var(--neon-cyan))] hover:bg-blue-500 text-[hsl(var(--primary-bg))] font-bold py-4 px-10 rounded-full text-lg md:text-xl shadow-[0_0_5px_rgba(0,240,255,0.8)] animate-[pulse_3s_ease-in-out_infinite] transition-all duration-300">
             Browse Games
           </a>
           

@@ -22,7 +22,7 @@ export default function Header() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/" className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">Home</Link>
-            <a href="#games" className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">Games</a>
+            <Link href="/games" className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">Games</Link>
             <a href="#how-it-works" className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">How It Works</a>
             <a href="#faq" className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">FAQ</a>
           </div>
@@ -44,11 +44,11 @@ export default function Header() {
         </nav>
         
         {/* Mobile Menu */}
-        <div className={`md:hidden bg-[hsl(var(--secondary-bg))] absolute top-full left-0 w-full z-20 border-b border-gray-800 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
+        <div className={`md:hidden bg-[hsl(var(--secondary-bg))] absolute top-full left-0 w-full z-50 border-b border-gray-800 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
           <div className="container mx-auto py-4 px-6">
             <div className="flex flex-col space-y-4">
               <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">Home</Link>
-              <a href="#games" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">Games</a>
+              <Link href="/games" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">Games</Link>
               <a href="#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">How It Works</a>
               <a href="#faq" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-[hsl(var(--neon-cyan))] transition-colors duration-300">FAQ</a>
             </div>
