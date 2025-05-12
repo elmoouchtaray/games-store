@@ -31,14 +31,10 @@ export default function Header() {
           <div className="md:hidden">
             <button 
               onClick={toggleMobileMenu}
-              className="text-white focus:outline-none"
+              className="text-white focus:outline-none h-10 w-10 flex items-center justify-center rounded-md bg-[hsla(var(--neon-cyan),0.1)] border border-[hsla(var(--neon-cyan),0.3)] hover:bg-[hsla(var(--neon-cyan),0.2)] transition-colors duration-300"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              <Menu className="h-6 w-6 text-[hsl(var(--neon-cyan))]" />
             </button>
           </div>
         </nav>
@@ -59,7 +55,7 @@ export default function Header() {
               </div>
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-white focus:outline-none h-10 w-10 flex items-center justify-center rounded-full bg-gray-800"
+                className="text-[hsl(var(--neon-cyan))] focus:outline-none h-10 w-10 flex items-center justify-center rounded-md bg-[hsla(var(--neon-cyan),0.1)] border border-[hsla(var(--neon-cyan),0.3)] hover:bg-[hsla(var(--neon-cyan),0.2)] transition-colors duration-300"
               >
                 <X className="h-6 w-6" />
               </button>
