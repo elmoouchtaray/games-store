@@ -111,3 +111,14 @@
 .font-inter {
   font-family: 'Inter', sans-serif;
 }
+
+/* Menu open states */
+.menu-open main section:first-child {
+  filter: blur(5px);
+  transition: filter 0.3s ease-in-out;
+}
+
+main section:first-child {
+  filter: blur(0);
+  transition: filter 0.3s ease-in-out;
+}

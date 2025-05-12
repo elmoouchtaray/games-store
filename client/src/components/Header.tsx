@@ -1,10 +1,12 @@
-import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 
-export default function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+interface HeaderProps {
+  isMobileMenuOpen: boolean;
+  setIsMobileMenuOpen: (isOpen: boolean) => void;
+}
 
+export default function Header({ isMobileMenuOpen, setIsMobileMenuOpen }: HeaderProps) {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -39,12 +41,12 @@ export default function Header() {
           </div>
         </nav>
         
-        {/* Mobile Menu - Positioned fixed to overlay the entire page with solid background */}
+        {/* Mobile Menu - Semi-transparent overlay */}
         <div 
-          className={`md:hidden fixed left-0 right-0 top-0 bottom-0 bg-[hsl(var(--primary-bg))] z-[9999] transition-all duration-300 ease-in-out ${
+          className={`md:hidden fixed left-0 right-0 top-0 bottom-0 bg-[hsla(var(--primary-bg),0.95)] backdrop-blur-md z-[9999] transition-all duration-300 ease-in-out ${
             isMobileMenuOpen 
-              ? 'opacity-100 translate-x-0' 
-              : 'opacity-0 translate-x-full pointer-events-none'
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 -translate-y-8 pointer-events-none'
           }`}
         >
           <div className="w-full h-full flex flex-col">

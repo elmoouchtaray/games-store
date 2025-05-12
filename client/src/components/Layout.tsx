@@ -9,6 +9,7 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Create a context to share download modal state across components
   useEffect(() => {
@@ -17,9 +18,12 @@ export default function Layout({ children }: LayoutProps) {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-grow">
+    <div className={`min-h-screen flex flex-col ${isMobileMenuOpen ? 'menu-open' : ''}`}>
+      <Header 
+        isMobileMenuOpen={isMobileMenuOpen}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+      />
+      <main className={`flex-grow transition-all duration-300 ${isMobileMenuOpen ? 'opacity-30 scale-[0.98]' : 'opacity-100 scale-100'}`}>
         {children}
       </main>
       <Footer />
